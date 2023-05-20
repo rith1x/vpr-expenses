@@ -1,0 +1,133 @@
+<html lang="en" and dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome User</title>
+
+</head>
+
+<body>
+  <div class="box">
+    <div class="cover">
+      <h1>Welcome!</h1>
+    </div>
+    <form id="form">
+      <div class="form-control">
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button class="btn" onclick="validate()">Login</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    function validate() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      if (username == "admin" && password == "admin") {
+        alert("Logged Admin");
+        window.open('admin.html');
+      } else if (username == "user1" && password == "user1") {
+        alert("Welcome User 1");
+        window.open('user1.html');
+      } else if (username == "user2" && password == "user2") {
+        alert("Welcome User 2"); window.open('user2.html');
+      } else if (username == "user3" && password == "user3") {
+        alert("Welcome User 3");
+        window.open('user3.html');
+      } else {
+        alert("Login Failed");
+      }
+    }
+  </script>
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    body {
+      margin: 0;
+      background-color: #1e1e1e;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .box {
+      width: 300px;
+      height: 400px;
+      border: solid 1px #3e3e42;
+      border-radius: 21px;
+      margin: auto;
+      overflow: hidden;
+      margin-top: calc(50vh - 200px);
+    }
+
+    .cover {
+      width: 100%;
+      font-family: 'Poppins', sans-serif;
+      height: 80px;
+      margin-top: 0;
+      background-color: #007acc;
+      border: 0;
+      border-radius: 21px 21px 0 0;
+    }
+
+    .form-control {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #252526;
+      height: 320px;
+      border-radius: 0 0 21px 21px;
+      width: 100%;
+    }
+
+    .form-control input {
+      cursor: pointer;
+      width: 80%;
+      font-size: 13px;
+      letter-spacing: 0.25px;
+      height: 30px;
+      color: #fff;
+      border-radius: 15px;
+      border: solid 1px #3e3e42;
+      font-family: 'Poppins', sans-serif;
+      background-color: #2d2d30;
+      padding: 10px;
+    }
+
+
+    #username {
+      margin-bottom: 10px;
+    }
+
+    #password {
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      height: 30px;
+      cursor: pointer;
+      background-color: #097ff5;
+      color: #fff;
+      border: none;
+      width: auto;
+      padding: 0 30px;
+      font-size: 12px;
+      font-family: 'Poppins', sans-serif;
+      border-radius: 21px;
+    }
+
+    .cover h1 {
+      color: aliceblue;
+      font-size: 30px;
+      margin-top: 0;
+      height: auto;
+      z-index: 5;
+      padding: 18px;
+      border: none;
+    }
+  </style>
+
+</body>
+
+</html>
